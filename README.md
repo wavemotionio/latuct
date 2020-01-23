@@ -12,8 +12,13 @@
 #### Choose Path To Cloned Repository
 ![alt text](https://github.com/wavemotionio/latuct/raw/master/images/screenshot-choose-cloned-path.png "Choose path to cloned repository")
 
+## Demo Instructions
+
 #### Edit Custom Options
 ![alt text](https://github.com/wavemotionio/latuct/raw/master/images/screenshot-edit-options.png "Edit custom options")
 
-#### Go To Source Website And Click Button
+#### Save Custom Options (set to 'localStorage' and save)
+![alt text](https://github.com/wavemotionio/latuct/raw/master/images/screenshot-save-options.png "Save custom options")
+
+#### Go To Source Website And Click Button (go to https://stackoverflow.com/)
 ![alt text](https://github.com/wavemotionio/latuct/raw/master/images/screenshot-go-and-click.png "Go to source website and click button")
