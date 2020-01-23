@@ -13,7 +13,7 @@ chrome.runtime.onInstalled.addListener(function() {
         console.log('customkey is set.');
     });
 
-    chrome.storage.local.set({ customvalue: '123456' }, function() {
+    chrome.storage.local.set({ customvalue: '1234567' }, function() {
         console.log('customvalue is set.');
     });
 });
