@@ -1,7 +1,7 @@
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
-    chrome.storage.local.set({ launchurl: 'http://winhplnstst133:8062/HP-UI/refs/pull/27997/merge' }, function() {
+    chrome.storage.local.set({ launchurl: 'http://winhplnstst133:8062/HP-UI/refs/pull/27997/merge/#/sso' }, function() {
         console.log('launchurl is set.');
     });
 
