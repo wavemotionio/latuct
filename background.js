@@ -9,11 +9,11 @@ chrome.runtime.onInstalled.addListener(function() {
         console.log('tokenlocation is set.');
     });
 
-    chrome.storage.local.set({ tokenkey: 'se:fkey' }, function() {
-        console.log('tokenkey is set.');
+    chrome.storage.local.set({ customkey: 'enrolleeKey' }, function() {
+        console.log('customkey is set.');
     });
 
-    chrome.storage.local.set({ tokenQuerystringParam: 'token' }, function() {
-        console.log('tokenQuerystringParam is set.');
+    chrome.storage.local.set({ customvalue: '123456' }, function() {
+        console.log('customvalue is set.');
     });
 });

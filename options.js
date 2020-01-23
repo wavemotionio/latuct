@@ -4,8 +4,8 @@ function initOptions() {
     let savebtn = document.getElementById('savesettings');
     let launchurl = document.getElementById('launch-url');
     let tokenlocation = document.getElementById('token-location');
-    let tokenkey = document.getElementById('token-key');
-    let tokenQuerystringParam = document.getElementById('token-querystring-param');
+    let customkey = document.getElementById('custom-key');
+    let customvalue = document.getElementById('custom-value');
 
     chrome.storage.local.get(['launchurl'], function(val) {
         launchurl.setAttribute('value', val.launchurl);
@@ -15,12 +15,12 @@ function initOptions() {
         tokenlocation.value = val.tokenlocation;
     });
 
-    chrome.storage.local.get(['tokenkey'], function(val) {
-        tokenkey.setAttribute('value', val.tokenkey);
+    chrome.storage.local.get(['customkey'], function(val) {
+        customkey.setAttribute('value', val.customkey);
     });
 
-    chrome.storage.local.get(['tokenQuerystringParam'], function(val) {
-        tokenQuerystringParam.setAttribute('value', val.tokenQuerystringParam);
+    chrome.storage.local.get(['customvalue'], function(val) {
+        customvalue.setAttribute('value', val.customvalue);
     });
 
     savebtn.addEventListener('click', function() {
@@ -32,12 +32,12 @@ function initOptions() {
             console.log('tokenlocation is saved by click.');
         });
 
-        chrome.storage.local.set({tokenkey: tokenkey.value}, function() {
-            console.log('tokenkey is saved by click.');
+        chrome.storage.local.set({customkey: customkey.value}, function() {
+            console.log('customkey is saved by click.');
         });
 
-        chrome.storage.local.set({tokenQuerystringParam: tokenQuerystringParam.value}, function() {
-            console.log('tokenQuerystringParam is saved by click.');
+        chrome.storage.local.set({customvalue: customvalue.value}, function() {
+            console.log('customvalue is saved by click.');
         });
     });
 }
