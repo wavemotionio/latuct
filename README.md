@@ -22,3 +22,6 @@
 
 #### Go To Source Website And Click Button (go to https://stackoverflow.com/)
 ![alt text](https://github.com/wavemotionio/latuct/raw/master/images/screenshot-go-and-click.png "Go to source website and click button")
+
+#### View Results In A New Tab
+![alt text](https://github.com/wavemotionio/latuct/raw/master/images/screenshot-results.png "View results in new tab")
