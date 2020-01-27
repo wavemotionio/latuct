@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(function() {
         console.log('launchurl is set.');
     });
 
-    chrome.storage.local.set({ tokenlocation: 'sessionStorage' }, function() {
+    chrome.storage.local.set({ tokenlocation: 'localStorage' }, function() {
         console.log('tokenlocation is set.');
     });
 
