@@ -8,21 +8,29 @@
         
         <hr />
         
+        <p>Value From Storage</p>
         <div>
             <label for="token-key">Token Key:</label> <input type="text" name="token-key" id="token-key" />
         </div>
         <div>
-            <label for="token-key">Token Deep Value (optional):</label> <input type="text" name="token-deep-value" id="token-deep-value" />
-        </div>
-        <div>
-            <label for="token-querystring-param">Querystring Parameter:</label> <input type="text" name="token-querystring-param" id="token-querystring-param" />
+            <label for="token-key">Token Deep Value:</label> <input type="text" name="token-deep-value" id="token-deep-value" /> (Optional: use only if the target value is nested in an object returned by 'Token Key')
         </div>
 
         <hr />
 
+        <p>Output</p>
+
         <div>
-            From current page's:<br />
-            <label for="token-location">Token Location:</label> 
+            <label for="token-querystring-param">Querystring Parameter:</label> <input type="text" name="token-querystring-param" id="token-querystring-param" />
+        </div>
+
+        <p><small>Format: [launch-url]?[Querystring Parameter]=[Value Found In Storage]</small></p>
+        <p><small>Example Output: https://chrome.com/?token=9278368545545</small></p>
+
+        <hr />
+
+        <div>
+            <label for="token-location">From the current page's:</label> 
             <select name="token-location" id="token-location">
                 <option value="sessionStorage">sessionStorage</option>
                 <option value="localStorage">localStorage</option>
