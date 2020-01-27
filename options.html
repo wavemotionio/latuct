@@ -7,19 +7,28 @@
         </div>
         
         <hr />
+        
         <div>
+            <label for="token-key">Token Key:</label> <input type="text" name="token-key" id="token-key" />
+        </div>
+        <div>
+            <label for="token-key">Token Deep Value (optional):</label> <input type="text" name="token-deep-value" id="token-deep-value" />
+        </div>
+        <div>
+            <label for="token-querystring-param">Querystring Parameter:</label> <input type="text" name="token-querystring-param" id="token-querystring-param" />
+        </div>
+
+        <hr />
+
+        <div>
+            From current page's:<br />
             <label for="token-location">Token Location:</label> 
             <select name="token-location" id="token-location">
                 <option value="sessionStorage">sessionStorage</option>
                 <option value="localStorage">localStorage</option>
             </select>
         </div>
-        <div>
-            <label for="token-key">Token Key:</label> <input type="text" name="token-key" id="token-key" />
-        </div>
-        <div>
-            <label for="token-querystring-param">Querystring Parameter:</label> <input type="text" name="token-querystring-param" id="token-querystring-param" />
-        </div>
+
         <div>
             <input type="button" name="savesettings" id="savesettings" value="save" />
         </div>

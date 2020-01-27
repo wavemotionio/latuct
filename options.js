@@ -5,6 +5,7 @@ function initOptions() {
     let launchurl = document.getElementById('launch-url');
     let tokenlocation = document.getElementById('token-location');
     let tokenkey = document.getElementById('token-key');
+    let tokendeepvalue = document.getElementById('token-deep-value');
     let tokenQuerystringParam = document.getElementById('token-querystring-param');
 
     chrome.storage.local.get(['launchurl'], function(val) {
@@ -17,6 +18,10 @@ function initOptions() {
 
     chrome.storage.local.get(['tokenkey'], function(val) {
         tokenkey.setAttribute('value', val.tokenkey);
+    });
+
+    chrome.storage.local.get(['tokendeepvalue'], function(val) {
+        tokendeepvalue.setAttribute('value', val.tokendeepvalue);
     });
 
     chrome.storage.local.get(['tokenQuerystringParam'], function(val) {
@@ -34,6 +39,10 @@ function initOptions() {
 
         chrome.storage.local.set({tokenkey: tokenkey.value}, function() {
             console.log('tokenkey is saved by click.');
+        });
+
+        chrome.storage.local.set({tokendeepvalue: tokendeepvalue.value}, function() {
+            console.log('tokendeepvalue is saved by click.');
         });
 
         chrome.storage.local.set({tokenQuerystringParam: tokenQuerystringParam.value}, function() {
