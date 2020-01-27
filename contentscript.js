@@ -26,7 +26,6 @@ button.onclick = function() {
 	    	chrome.storage.local.get(['tokenlocation'], function(c) {
 	    		chrome.storage.local.get(['tokenkey'], function(d) {
 	    			chrome.storage.local.get(['tokendeepvalue'], function(e) {
-
 	    				if (window[c.tokenlocation][d.tokenkey]) {
 		    				if (e.tokendeepvalue.length > 0) {
 		    					let tokenValue = deepFind(window[c.tokenlocation][d.tokenkey], e.tokendeepvalue),
@@ -35,14 +34,14 @@ button.onclick = function() {
 		    					if (tokenValue) {
 		    						window.open(redirectLocation);
 		    					} else {
-		    						console.log('ERROR: ' + c.tokenlocation + '/' + d.tokenkey + '.' + e.tokendeepvalue + ' token not found.', redirectLocation);
+		    						console.log('ERROR: ' + c.tokenlocation + '/' + d.tokenkey + '.' + e.tokendeepvalue + ' not found.');
 		    					}
 
 		    				} else {
 								window.open(a.launchurl + '?' + b.tokenQuerystringParam + '=' + window[c.tokenlocation][d.tokenkey]);
 							}
 						} else {
-							console.log('ERROR: object not found in storage on current site');
+							console.log('ERROR: ' + c.tokenlocation + '/' + d.tokenkey + ' not found.');
 						}
 					});
 				});
