@@ -27,13 +27,13 @@ button.onclick = function() {
                 chrome.storage.local.get(['tokenkey'], function(d) {
                     chrome.storage.local.get(['tokendeepvalue'], function(e) {
 
-                        const storedToken = JSON.parse(window[c.tokenlocation][d.tokenkey]);
+                        const storedToken = window[c.tokenlocation][d.tokenkey];
 
                         if (storedToken) {
 
                             if (e.tokendeepvalue.length > 0) {
 
-                                let tokenValue = deepFind(storedToken, e.tokendeepvalue);
+                                let tokenValue = deepFind(JSON.parse(storedToken), e.tokendeepvalue);
 
                                 if (tokenValue) {
                                     let redirectLocation = a.launchurl + '?' + b.tokenQuerystringParam + '=' + tokenValue;
