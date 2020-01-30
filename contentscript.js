@@ -26,20 +26,27 @@ button.onclick = function() {
 	    	chrome.storage.local.get(['tokenlocation'], function(c) {
 	    		chrome.storage.local.get(['tokenkey'], function(d) {
 	    			chrome.storage.local.get(['tokendeepvalue'], function(e) {
-	    				if (window[c.tokenlocation][d.tokenkey]) {
+
+                        const storedToken = JSON.parse(window[c.tokenlocation][d.tokenkey]);
+
+                        if (storedToken) {
+
 		    				if (e.tokendeepvalue.length > 0) {
-		    					let tokenValue = deepFind(window[c.tokenlocation][d.tokenkey], e.tokendeepvalue),
-		    						redirectLocation = a.launchurl + '?' + b.tokenQuerystringParam + '=' + tokenValue;
+
+                                let tokenValue = deepFind(storedToken, e.tokendeepvalue);
 
 		    					if (tokenValue) {
+                                    let redirectLocation = a.launchurl + '?' + b.tokenQuerystringParam + '=' + tokenValue;
+
 		    						window.open(redirectLocation);
 		    					} else {
 		    						console.log('ERROR: ' + c.tokenlocation + '/' + d.tokenkey + '.' + e.tokendeepvalue + ' not found.');
 		    					}
 
 		    				} else {
-								window.open(a.launchurl + '?' + b.tokenQuerystringParam + '=' + window[c.tokenlocation][d.tokenkey]);
+								window.open(a.launchurl + '?' + b.tokenQuerystringParam + '=' + storedToken);
 							}
+
 						} else {
 							console.log('ERROR: ' + c.tokenlocation + '/' + d.tokenkey + ' not found.');
 						}
